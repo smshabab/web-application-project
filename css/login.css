@@ -1,0 +1,35 @@
+.right_login_form_row_1{
+    width: 100%;
+    color: #a148f5;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.right_login_form_row_2{
+    width: 100%;
+    color: #7379fc;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.right_login_form_row_4{
+    width: 100%;
+    color: #7379fc;
+    font-weight: 400;
+}
+
+.right_login_form_row_4 a{
+    float: right;
+    padding-right: 40px;
+}
+
+.right_login_form_row_5{
+    margin-top: 20px;
+}
+
+
+.right_login_form_row_6{
+    text-align: center;
+    margin-top: 100px;
+    color: #a148f5;
+}
