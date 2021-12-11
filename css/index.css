@@ -1,10 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+
 .header{
     background-color: #cf9e27;
     padding: 20px;
 }
 
 .search input[type=text]{
-    width: 100%;
+    width: 80%;
     outline: none;
     border: 2px solid #ffffff;
     background-color: #cf9e27;
@@ -30,6 +37,29 @@
     color: #ffffff;
 }
 
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu ul li{
+    float: left;
+    padding: 10px 20px;
+}
+
+
+.menu ul li a:hover{
+    color: #000000;
+}
+
+.menu ul li:nth-child(2){
+    border-right: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+}
 
 
 .buttons{
