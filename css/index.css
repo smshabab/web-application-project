@@ -60,6 +60,10 @@
     border-right: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
 }
+.menu ul li:nth-child(3){
+    border-right: 2px solid #ffffff;
+}
+
 
 
 .buttons{

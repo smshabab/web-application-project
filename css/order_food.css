@@ -64,6 +64,10 @@
     border-left: 2px solid #ffffff;
 }
 
+.menu ul li:nth-child(3){
+    border-right: 2px solid #ffffff;
+}
+
 
 .buttons{
   float: right;  
@@ -80,8 +84,8 @@
     color: #000000;
 }
 
-.order_food_menu{
-
+.order_food_menu h2{
+    margin-bottom: 50px;
 }
 
 .order_food_menu h1, .order_food_cart h1{
@@ -98,11 +102,6 @@
     margin-bottom: 50px;
 }
 
-
-.order_food_cart{
-    background-color: rgb(204, 201, 201);
-}
-
 .add-food-button button{
     background-color: #0fc758;
     color: #ffffff;
@@ -113,9 +112,9 @@
 }
 
 .add-food-button{
-    width: 230px;
+    width: 190px;
     height: 70px;
-    left: 50%;
+    left: 60%;
     top: 50%;
     transform: translate(-50%,-50%);
     display: none;
@@ -127,7 +126,103 @@
 
 .food-card:hover img{
     background-color: #cf9e27;
-    opacity: 40%;
+    opacity: 50%;
 }   
 
+.food-card{
+    width: 90%;
+    background-color: #cf9e27;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: #000000 0px 5px 5px 0px;;
+}
 
+.food-card h3{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.food-card p{
+    width: 80%;
+    margin: auto;
+}
+
+.order_food_cart{
+    background-color: white;
+}
+
+.order_food_cart h1{
+    border-bottom: 2px solid #cf9e27;
+    padding-bottom: 45px;
+}
+
+.cart-headers{
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cart-items{
+    margin: 10px 0;
+}
+
+.cart-items .product-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-items .product button{
+    background-color: red;
+    color: #ffffff;
+    border: none;
+    padding: 5px 0;
+    margin-top: auto;
+}
+
+.cart-items button:hover{
+    color: #000;
+    border: 1px solid #000000;
+}
+
+.cart-items input{
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+
+.quantity button{
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+}
+
+.quantity button:first-child{
+    background-color: red;
+    padding: 0 8px;
+}
+
+.quantity button:last-child{
+    background-color: green;
+    padding: 0 5px;
+}
+
+.cart-bottom{
+    border-top: 2px solid #cf9e27;
+    margin-top: 30px;
+    padding: 50px 0;
+    font-weight: bold;
+}
+
+.cart-bottom button{
+    background-color: green;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+}
+
+.cart-bottom button:hover{
+    color: #000;
+    border: 1px solid #000000;
+}
