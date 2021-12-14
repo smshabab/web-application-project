@@ -33,15 +33,18 @@
                         <li>
                             <a href="#">My Orders</a>
                         </li>
-                        <li>
-                            <a href="./views/admin_panel.php">Admin Panel</a>
-                        </li>
+                        <?php 
+                            if($_SESSION['admin']){ 
+                        ?>
+                            <li>
+                                <a href="./views/admin_panel.php">Admin Panel</a>
+                            </li>
+                        <?php 
+                            }
+                        ?>
+                        
                     <?php 
-                        }else{ 
-                    ?>
-                       
-                    <?php
-                        } 
+                        }
                     ?>
                 </ul>
             </div>
