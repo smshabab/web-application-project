@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!$_SESSION['session_is_alive']){
-        header("Location:index.html");
+        header("Location:login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@
                                         <p>This is a small descripton about this page</p>
                                     </div>
                                     <div class="col-lg-6 right_top_right_menu">
-                                        <button onclick="location.href='login.html';">LogOut</button>
+                                        <button onclick="location.href='login.php';">LogOut</button>
                                     </div>
                                 </div>
                                 

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!$_SESSION['session_is_alive']){
+        header("Location:login.php");
+    }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +39,8 @@
             </div>
             <div class="col-lg-3">
                 <div class="buttons">
-                    <button onclick="window.location.href='./html/login.html'">Login</button>
-                    <button onclick="window.location.href='./html/registration.html'">Signup</button>
+                    <button onclick="window.location.href='./login.php'">Login</button>
+                    <button onclick="window.location.href='./registration.php'">Signup</button>
                     <button>Cart</button>
                 </div>
             </div>

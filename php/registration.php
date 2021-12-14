@@ -17,13 +17,14 @@
                     echo "User already exist (error)";
                 }
             }else{
-                header("Location:registration.html");
+                header("Location:../views/registration.php");
             }
         }else{
-            header("Location:registration.html");
+            echo '<script>alert("Fields Can not be Empty...!");</script>';
+            header("Location:../views/registration.php");
         }
     }else{
-        header("Location:registration.html");
+        header("Location:../views/registration.php");
     }
 
 
@@ -62,7 +63,7 @@
 
 		}else{
 			die("Database not connected".mysqli_connect_error()."<br/>");
-            header("Location:index.html");
+            header("Location:../views/login.php");
 		}
         return $check;
     }
@@ -78,7 +79,7 @@
 
             if(mysqli_query($con,$sql)){
                 echo "Row inserted";
-                header("Location:index.html");
+                header("Location:../views/login.php");
             }else{
                 echo "Insertion failed: ".mysqli_connect_error($con)."<br/>";
             }
@@ -86,7 +87,7 @@
 
 		}else{
 			die("Database not connected".mysqli_connect_error()."<br/>");
-            header("Location:registration.html");
+            header("Location:../views/registration.php");
 		}
     }
     

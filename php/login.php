@@ -13,19 +13,19 @@
             if(check_user($email, $password)){
                 $_SESSION['session_is_alive'] = true;
                 echo "Send user to dash borad<br>";
-                header("Location:../html/dashboard.html");
+                header("Location:../index.php");
             }else{
                 echo "User do not exist (error)<br>";
                 echo "Email or password maybe incorrect<br>";
-                header("Location:login.html");
+                header("Location:../views/login.php");
             }
             
         }else{
-            header("Location:login.html");
+            header("Location:../views/login.php");
         }
 
     }else{
-        header("Location:login.html");
+        header("Location:../views/login.php");
     }
 
 
@@ -48,7 +48,7 @@
 
 		}else{
 			die("Database not connected".mysqli_connect_error()."<br/>");
-            header("Location:login.html");
+            header("Location:../views/login.php");
 		}
     }
 
