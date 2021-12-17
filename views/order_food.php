@@ -52,68 +52,18 @@
             <div class="col-lg-8 order_food_menu overflow-auto h-100">
                 <h1>Order Menu</h1>
                 <h2>Starters</h2>
-                <div class="row">
-                    <div class="col-lg-4 d-flex justify-content-center">
-                        <div class="food-card">
-                            <h3>Price : 200 BDT</h3>
-                            <div class="position-relative d-flex justify-content-center">
-                                <img src="../images/gyoza.webp" alt="" width="300px" height="300px">
-                                <div class="position-absolute add-food-button"><button>Add Food</button></div>
-                            </div>
-                            <h3>Chicken Gyoza</h3>
-                            <p>Gyoza is a thinly rolled out dough filled with ground meat, sealed and cooked. And considered to be Japanese cuisine.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 d-flex justify-content-center">
-                        <div class="food-card">
-                            <h3>Price : 200 BDT</h3>
-                            <div class="position-relative d-flex justify-content-center">
-                                <img src="../images/gyoza.webp" alt="" width="300px" height="300px">
-                                <div class="position-absolute add-food-button"><button>Add Food</button></div>
-                            </div>
-                            <h3>Chicken Gyoza</h3>
-                            <p>Gyoza is a thinly rolled out dough filled with ground meat, sealed and cooked. And considered to be Japanese cuisine.</p>
-                        </div>
-                    </div><div class="col-lg-4 d-flex justify-content-center">
-                        <div class="food-card">
-                            <h3>Price : 200 BDT</h3>
-                            <div class="position-relative d-flex justify-content-center">
-                                <img src="../images/gyoza.webp" alt="" width="300px" height="300px">
-                                <div class="position-absolute add-food-button"><button>Add Food</button></div>
-                            </div>
-                            <h3>Chicken Gyoza</h3>
-                            <p>Gyoza is a thinly rolled out dough filled with ground meat, sealed and cooked. And considered to be Japanese cuisine.</p>
-                        </div>
-                    </div><div class="col-lg-4 d-flex justify-content-center">
-                        <div class="food-card">
-                            <h3>Price : 200 BDT</h3>
-                            <div class="position-relative d-flex justify-content-center">
-                                <img src="../images/gyoza.webp" alt="" width="300px" height="300px">
-                                <div class="position-absolute add-food-button"><button>Add Food</button></div>
-                            </div>
-                            <h3>Chicken Gyoza</h3>
-                            <p>Gyoza is a thinly rolled out dough filled with ground meat, sealed and cooked. And considered to be Japanese cuisine.</p>
-                        </div>
-                    </div><div class="col-lg-4 d-flex justify-content-center">
-                        <div class="food-card">
-                            <h3>Price : 200 BDT</h3>
-                            <div class="position-relative d-flex justify-content-center">
-                                <img src="../images/gyoza.webp" alt="" width="300px" height="300px">
-                                <div class="position-absolute add-food-button"><button>Add Food</button></div>
-                            </div>
-                            <h3>Chicken Gyoza</h3>
-                            <p>Gyoza is a thinly rolled out dough filled with ground meat, sealed and cooked. And considered to be Japanese cuisine.</p>
-                        </div>
-                    </div>
-                    
-                </div>
+                <div class="row" id="starters"></div>
                 <h2>Main Courses</h2>
                 <div class="row">
-                    
+                    <div id="mains"></div>
+                </div>
+                <h2>Deserts</h2>
+                <div class="row">
+                    <div id="deserts"></div>
                 </div>
                 <h2>Drinks</h2>
                 <div class="row">
-                    
+                    <div id="drinks"></div>
                 </div>
             </div>
             <div class="col-lg-4 order_food_cart overflow-auto h-100">
@@ -161,58 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 cart-items">
-                        <div class="row">
-                            <div class="col-lg-5 product">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <img src="../images/gyoza.webp" alt="" width="100px">
-                                    </div>
-                                    <div class="col-lg-7 product-right">
-                                        <p>Name</p>
-                                        <button>Remove</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 quantity">
-                                <button>-</button>
-                                <input type="number" name="" id="" style="width: 43px;">
-                                <button>+</button>
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 cart-items">
-                        <div class="row">
-                            <div class="col-lg-5 product">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <img src="../images/gyoza.webp" alt="" width="100px">
-                                    </div>
-                                    <div class="col-lg-7 product-right">
-                                        <p>Name</p>
-                                        <button>Remove</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 quantity">
-                                <button>-</button>
-                                <input type="number" name="" id="" style="width: 43px;">
-                                <button>+</button>
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-lg-12 cart-items">
                         <div class="row">
                             <div class="col-lg-5 product">
@@ -318,5 +217,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../javascript/order_food.js"></script>
 </body>
 </html>

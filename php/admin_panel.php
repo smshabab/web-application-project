@@ -23,8 +23,14 @@
 			}else{
 				echo json_encode("0");
 			}
-        }else if($_GET['edit']){
-
+        }else if($_GET['update']){
+            $data = json_decode($_GET['update']);
+            $sql = "UPDATE `food` SET `name`='".$data->name."',`price`=".$data->price.",`description`='".$data->description."',`type`='".$data->type."' WHERE serial=".$data->serial;
+            if(mysqli_query($con,$sql)){
+				echo json_encode("1");
+			}else{
+				echo json_encode("0");
+			}
         }else{
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $name = trim($_POST['name']);
@@ -79,7 +85,7 @@
                             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                                 echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
                                 $con=mysqli_connect("localhost","root","","naima_web_application_practice");
-                                $sql="INSERT INTO `food`(`name`, `price`, `description`, `type`, `image`) VALUES ('".$name."','".$price."','".$description."','".$type."','".basename( $_FILES["fileToUpload"]["name"])."')";
+                                $sql="INSERT INTO `food`(`name`, `price`, `description`, `type`, `image`) VALUES ('".$name."',".$price.",'".$description."','".$type."','".basename( $_FILES["fileToUpload"]["name"])."')";
                                 if(mysqli_query($con,$sql)){
                                     header("Location:../views/admin_panel.php");
                                 }else{
