@@ -10,10 +10,8 @@
 			$result=mysqli_query($con,$sql);
 			$searchData = array();
 			while ($row=mysqli_fetch_array($result)) {
-				# code...
 				$searchData[] = $row;
 			}
-			//returning response in JSON format
 			echo json_encode($searchData);
         }else if($_GET['delete']){
             $con=mysqli_connect("localhost","root","","naima_web_application_practice");
@@ -24,6 +22,7 @@
 				echo json_encode("0");
 			}
         }else if($_GET['update']){
+            $con=mysqli_connect("localhost","root","","naima_web_application_practice");
             $data = json_decode($_GET['update']);
             $sql = "UPDATE `food` SET `name`='".$data->name."',`price`=".$data->price.",`description`='".$data->description."',`type`='".$data->type."' WHERE serial=".$data->serial;
             if(mysqli_query($con,$sql)){

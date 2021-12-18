@@ -2,22 +2,17 @@ var edit_row_id_obj = {"editable":false, "serial":1};
 
 function onLoad(){
     
-    //call ajax
     let ajax = new XMLHttpRequest();
     let method = "GET";
     let url = "../php/admin_panel.php?get="+true;
     let asynchronous = true;
-
     ajax.open(method, url, asynchronous);
-
-    //sending ajax request
     ajax.send();
     ajax.onreadystatechange = function()
     {
         if(this.readyState == 4 && this.status==200)
         {
             let searchData = JSON.parse(this.responseText);
-            console.log(searchData);
             document.getElementById("foods").innerHTML = "";
             let i = 0;
             for(i; i<searchData.length; i++)
@@ -126,15 +121,10 @@ function onLoad(){
                                     "</div>"+
                                 "</div>";
                 }
-                
-
-                   
                 document.getElementById("foods").appendChild(val);
-                
             }
         }
     };
-
 }
 onLoad();
 
@@ -146,9 +136,7 @@ function deleteButtonPressHandler(serial){
     let method = "GET";
     let url = "../php/admin_panel.php?delete="+serial;
     let asynchronous = true;
-
     ajax.open(method, url, asynchronous);
-
     ajax.send();
     ajax.onreadystatechange = function()
     {
@@ -162,14 +150,11 @@ function deleteButtonPressHandler(serial){
     
 } 
 
-
-
 function editButtonPressHandler(serial){
     console.log("Edit Button pressed "+serial);
     edit_row_id_obj = {"editable":true, "serial":serial};
     onLoad();
 }
-
 
 function updateButtonPressHandler(serial){
     console.log("Update Button pressed "+serial);
@@ -181,7 +166,6 @@ function updateButtonPressHandler(serial){
 
     if(type=="Select a type"){
         alert("Select a Type");
-        onLoad();
     }else{
         const update_row_value_obj = {
             "name" : name,
@@ -192,42 +176,28 @@ function updateButtonPressHandler(serial){
         };
         const update_row_value = JSON.stringify(update_row_value_obj);
     
-        console.log("Check : "+update_row_value);
-    
         if(name && price && description && type){
-            //call ajax
+            
             let ajax = new XMLHttpRequest();
             let method = "GET";
             let url = "../php/admin_panel.php?update="+update_row_value;
             let asynchronous = true;
-    
             ajax.open(method, url, asynchronous);
-    
-            //sending ajax request
             ajax.send();
             ajax.onreadystatechange = function()
-            {
+            {   
                 if(this.readyState == 4 && this.status==200)
                 {
                     if(JSON.parse(this.responseText)==1){
                         edit_row_id_obj.editable = false;
                         onLoad();
-                    }else{
-                        alert("Errors!");
                     }
-                }else{
-                    console.log("Error Found");
                 }
             };
         }else{
             alert("Fill up the input boxes");
         }
     }
-
-
-
-    
-    
 } 
 
 function cancelButtonPressHandler(serial){

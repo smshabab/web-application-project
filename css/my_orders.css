@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+.header{
+    background-color: #cf9e27;
+    padding: 20px;
+}
+
+.search input[type=text]{
+    width: 80%;
+    outline: none;
+    border: 2px solid #ffffff;
+    background-color: #cf9e27;
+    color: #ffffff;
+    padding: 10px 10px;
+}
+
+.search input[type=text]:hover{
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ffffff;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ffffff;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu ul li{
+    float: left;
+    padding: 10px 20px;
+}
+
+
+.menu ul li a:hover{
+    color: #000000;
+}
+
+.menu ul li:nth-child(2){
+    border-right: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+}
+.menu ul li:nth-child(4){
+    border-left: 2px solid #ffffff;
+}
+
+
+
+.buttons{
+  float: right;  
+}
+.buttons button{
+
+    background-color: #cf9e27;
+    padding: 10px 25px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+.buttons button:hover{
+    border: 2px solid #000000;
+    color: #000000;
+}

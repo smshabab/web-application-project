@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
     session_start();
     if(!$_SESSION['session_is_alive']){
         header("Location:login.php");
@@ -24,24 +25,49 @@
             <div class="col-lg-6 d-flex justify-content-center menu">
                 <ul>
                     <li>
-                        <a href="../index.html">Home</a>
+                        <a href="../index.php">Home</a>
                     </li>
-                    <li>
-                        <a href="#">Order Food</a>
-                    </li>
-                    <li>
-                        <a href="#">My Orders</a>
-                    </li>
-                    <li>
-                        <a href="./admin_panel.html">Admin Panel</a>
-                    </li>
+                    
+
+                    <?php 
+                        if($_SESSION['session_is_alive']){ 
+                    ?>
+                        <li>
+                            <a href="#">Order Food</a>
+                        </li>
+                        <li>
+                            <a href="./my_orders.php">My Orders</a>
+                        </li>
+                        <?php 
+                            if($_SESSION['admin']){ 
+                        ?>
+                            <li>
+                                <a href="./admin_panel.php">Admin Panel</a>
+                            </li>
+                        <?php 
+                            }
+                        ?>
+                        
+                    <?php 
+                        }
+                    ?>
                 </ul>
             </div>
             <div class="col-lg-3">
                 <div class="buttons">
-                    <button onclick="window.location.href='./login.php'">Login</button>
-                    <button onclick="window.location.href='./registration.php'">Signup</button>
-                    <button>Cart</button>
+                    <?php 
+                        if($_SESSION['session_is_alive']){ 
+                    ?>
+                        <button onclick="window.location.href='./login.php'">Logout</button>
+                        <button onclick="window.location.href='#'">Cart</button>
+                    <?php 
+                        }else{ 
+                    ?>
+                        <button onclick="window.location.href='./login.php'">Login</button>
+                        <button onclick="window.location.href='./registration.php'">Signup</button>
+                    <?php
+                        } 
+                    ?>
                 </div>
             </div>
         </div>
