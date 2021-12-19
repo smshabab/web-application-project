@@ -69,7 +69,7 @@
     
                                 <div class="row right_login_form_row_4">
                                     <div class="col-lg-12">
-                                        <a href="reset_password.html">Forgot Password?</a>
+                                        <a href="./reset_password.php">Forgot Password?</a>
                                     </div>
                                 </div>
     
@@ -83,7 +83,7 @@
     
                                 <div class="row right_login_form_row_6">
                                     <div class="col-lg-12">
-                                        New here? <a href="../html/registration.html">Create Account</a>
+                                        New here? <a href="./registration.php">Create Account</a>
                                     </div>
                                 </div>
     

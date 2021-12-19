@@ -89,7 +89,7 @@
 
                             <div class="row right_login_form_row_6">
                                 <div class="col-lg-12">
-                                    Already have an account? <a href="../html/login.html">LogIn</a>
+                                    Already have an account? <a href="./login.php">LogIn</a>
                                 </div>
                             </div>
 
