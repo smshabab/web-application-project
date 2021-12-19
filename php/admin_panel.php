@@ -6,7 +6,7 @@
 	}else{
         if($_GET['get']){
             $con=mysqli_connect("localhost","root","","naima_web_application_practice");
-            $sql="SELECT * FROM food";
+            $sql="SELECT * FROM food ORDER BY serial DESC";
 			$result=mysqli_query($con,$sql);
 			$searchData = array();
 			while ($row=mysqli_fetch_array($result)) {

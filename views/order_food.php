@@ -113,21 +113,86 @@
                     </div>
                     <div class="col-lg-12 cart-items">
                         <div class="row">
-                            <div class="col-lg-5 product">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <img src="../images/gyoza.webp" alt="" width="100px">
-                                    </div>
-                                    <div class="col-lg-7 product-right">
-                                        <p>Name</p>
-                                        <button>Remove</button>
+                            <div class="col-lg-5">
+                                <div class="product">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <img src="../images/gyoza.webp" alt="" width="100px">
+                                        </div>
+                                        <div class="col-lg-7 product-right">
+                                            <p>Name</p>
+                                            <button>Remove</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 quantity">
-                                <button>-</button>
-                                <input type="number" name="" id="" style="width: 43px;">
-                                <button>+</button>
+                            <div class="col-lg-3">
+                                <div class="quantity">
+                                    <button>-</button>
+                                    <input type="number" name="" id="" style="width: 43px;">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                200 BDT
+                            </div>
+                            <div class="col-lg-2">
+                                200 BDT
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 cart-items">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="product">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <img src="../images/gyoza.webp" alt="" width="100px">
+                                        </div>
+                                        <div class="col-lg-7 product-right">
+                                            <p>Name</p>
+                                            <button>Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="quantity">
+                                    <button>-</button>
+                                    <input type="number" name="" id="" style="width: 43px;">
+                                    <button>+</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                200 BDT
+                            </div>
+                            <div class="col-lg-2">
+                                200 BDT
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 cart-items">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="product">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <img src="../images/gyoza.webp" alt="" width="100px">
+                                        </div>
+                                        <div class="col-lg-7 product-right">
+                                            <p>Name</p>
+                                            <button>Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="quantity">
+                                    <button>-</button>
+                                    <input type="number" name="" id="" style="width: 43px;">
+                                    <button>+</button>
+                                </div>
                             </div>
                             <div class="col-lg-2">
                                 200 BDT
@@ -138,84 +203,9 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-12 cart-items">
-                        <div class="row">
-                            <div class="col-lg-5 product">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <img src="../images/gyoza.webp" alt="" width="100px">
-                                    </div>
-                                    <div class="col-lg-7 product-right">
-                                        <p>Name</p>
-                                        <button>Remove</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 quantity">
-                                <button>-</button>
-                                <input type="number" name="" id="" style="width: 43px;">
-                                <button>+</button>
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 cart-items">
-                        <div class="row">
-                            <div class="col-lg-5 product">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <img src="../images/gyoza.webp" alt="" width="100px">
-                                    </div>
-                                    <div class="col-lg-7 product-right">
-                                        <p>Name</p>
-                                        <button>Remove</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 quantity">
-                                <button>-</button>
-                                <input type="number" name="" id="" style="width: 43px;">
-                                <button>+</button>
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 cart-items">
-                        <div class="row">
-                            <div class="col-lg-5 product">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <img src="../images/gyoza.webp" alt="" width="100px">
-                                    </div>
-                                    <div class="col-lg-7 product-right">
-                                        <p>Name</p>
-                                        <button>Remove</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 quantity">
-                                <button>-</button>
-                                <input type="number" name="" id="" style="width: 43px;">
-                                <button>+</button>
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
+                    
                 </div>
 
                 <div class="col-lg-12 cart-bottom">
@@ -227,10 +217,10 @@
                             Total Price
                         </div>
                         <div class="col-lg-2">
-                            1240 BDT
+                            <div id="total_price">0</div> BDT
                         </div>
                         <div class="col-lg-4">
-                            <button>Proceed To Payment</button>
+                            <button>Confirm Order</button>
                         </div>
                     </div>
                 </div>

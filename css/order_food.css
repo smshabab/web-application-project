@@ -102,7 +102,7 @@
     margin-bottom: 50px;
 }
 
-.add-food-button button{
+.add-food-button{
     background-color: #0fc758;
     color: #ffffff;
     padding: 10px 25px;
@@ -112,12 +112,21 @@
 }
 
 .add-food-button{
-    width: 190px;
-    height: 70px;
-    left: 60%;
-    top: 50%;
-    transform: translate(-50%,-50%);
     display: none;
+}
+
+.relative {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left: 30px;
+}
+  
+.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .food-card:hover .add-food-button{
@@ -147,6 +156,12 @@
 .food-card p{
     width: 80%;
     margin: auto;
+}
+
+.food-card img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .order_food_cart{
