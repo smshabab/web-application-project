@@ -2,6 +2,7 @@
     session_start();
     $_SESSION['session_is_alive'] = false;
     $_SESSION['admin'] = false;
+    $_SESSION['customer_serial'];
     if (!empty($_POST)) {
             
         $email = trim($_POST['email']);
@@ -14,7 +15,6 @@
             if(check_user($email, $password)){
                 $_SESSION['session_is_alive'] = true;
                 is_admin($email, $password) ? $_SESSION['admin'] = true : $_SESSION['admin'] = false;
-                echo "Send user to dash borad<br>";
                 header("Location:../index.php");
             }else{
                 echo "User do not exist (error)<br>";
@@ -36,11 +36,15 @@
 		if($con){
             echo "Database connected successfully...<br/>";
 
-            $sql="SELECT * FROM registration WHERE email='".$email."' and password='".$password."'";
+            $sql="SELECT serial FROM registration WHERE email='".$email."' and password='".$password."'";
 
             $result=mysqli_query($con,$sql);
-
+            
             if(mysqli_num_rows($result)==1){
+                while ($row=mysqli_fetch_array($result))
+			    {
+                    $_SESSION['customer_serial'] = $row['serial'];
+                }
                 return true;
             }else{
                 return false;

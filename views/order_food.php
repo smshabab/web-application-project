@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="col-lg-4 order_food_cart overflow-auto h-100">
-                <h1>Food Cart (5)</h1>
+                <h1>Food Cart (<span id="total_food_count"></span>)</h1>
                 <div class="row cart">
                     <div class="col-lg-12 cart-headers">
                         <div class="row">
@@ -111,6 +111,8 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col-lg-12 cart-items">
                         <div class="row">
                             <div class="col-lg-5">
@@ -119,9 +121,11 @@
                                         <div class="col-lg-5">
                                             <img src="../images/gyoza.webp" alt="" width="100px">
                                         </div>
-                                        <div class="col-lg-7 product-right">
-                                            <p>Name</p>
-                                            <button>Remove</button>
+                                        <div class="col-lg-7">
+                                            <div class="product-right">
+                                                <p>Name</p><br>
+                                                <button>Remove</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +133,7 @@
                             <div class="col-lg-3">
                                 <div class="quantity">
                                     <button>-</button>
-                                    <input type="number" name="" id="" style="width: 43px;">
+                                    <input type="number" style="width: 43px;">
                                     <button>+</button>
                                 </div>
                             </div>
@@ -150,9 +154,11 @@
                                         <div class="col-lg-5">
                                             <img src="../images/gyoza.webp" alt="" width="100px">
                                         </div>
-                                        <div class="col-lg-7 product-right">
-                                            <p>Name</p>
-                                            <button>Remove</button>
+                                        <div class="col-lg-7">
+                                            <div class="product-right">
+                                                <p>Name</p><br>
+                                                <button>Remove</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +166,7 @@
                             <div class="col-lg-3">
                                 <div class="quantity">
                                     <button>-</button>
-                                    <input type="number" name="" id="" style="width: 43px;">
+                                    <input type="number" style="width: 43px;">
                                     <button>+</button>
                                 </div>
                             </div>
@@ -172,36 +178,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 cart-items">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="product">
-                                    <div class="row">
-                                        <div class="col-lg-5">
-                                            <img src="../images/gyoza.webp" alt="" width="100px">
-                                        </div>
-                                        <div class="col-lg-7 product-right">
-                                            <p>Name</p>
-                                            <button>Remove</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="quantity">
-                                    <button>-</button>
-                                    <input type="number" name="" id="" style="width: 43px;">
-                                    <button>+</button>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                            <div class="col-lg-2">
-                                200 BDT
-                            </div>
-                        </div>
-                    </div>
+                    <div id="list_cart"></div>
                     
                     
                     
@@ -220,7 +197,7 @@
                             <div id="total_price">0</div> BDT
                         </div>
                         <div class="col-lg-4">
-                            <button>Confirm Order</button>
+                            <button onclick="confirmOrderButtonPressHandler()">Confirm Order</button>
                         </div>
                     </div>
                 </div>

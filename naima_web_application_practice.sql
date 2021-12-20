@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2021 at 04:27 PM
+-- Generation Time: Dec 20, 2021 at 01:48 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -24,28 +24,47 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dashboard`
+-- Table structure for table `food`
 --
 
-CREATE TABLE `dashboard` (
-  `heading_1` int(11) NOT NULL,
-  `heading_2` int(11) NOT NULL,
-  `heading_3` int(11) NOT NULL,
-  `heading_4` int(11) NOT NULL,
-  `heading_5` int(11) NOT NULL,
-  `id` int(11) NOT NULL
+CREATE TABLE `food` (
+  `serial` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `price` double NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `image` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `dashboard`
+-- Dumping data for table `food`
 --
 
-INSERT INTO `dashboard` (`heading_1`, `heading_2`, `heading_3`, `heading_4`, `heading_5`, `id`) VALUES
-(26, 27, 28, 29, 30, 6),
-(31, 32, 33, 34, 35, 7),
-(36, 37, 38, 39, 40, 8),
-(41, 42, 43, 44, 45, 9),
-(1, 2, 3, 4, 5, 11);
+INSERT INTO `food` (`serial`, `name`, `price`, `description`, `type`, `image`) VALUES
+(3, 'Beef Stake', 1500, 'Beef Stake Description', 'Main Course', 'GVR-HanksKobe.jpg'),
+(4, 'Strawberry Ice Cream', 300, 'Strawberry Ice Cream Description', 'Desert', 'http___cdn.cnn.com_cnnnext_dam_assets_171005130657-cambodia-cuisine-fine-dining-wat-damnak-purple-dragon-fruit-passion-and-vanilla-sorbet-meringue-and-curd-1.jpg'),
+(9, 'Blue', 200, 'Blue Lemonade Cocktail', 'Drinks', 'blue_lemonade.webp'),
+(10, 'Gyoza', 200, 'Description', 'Starter', 'gyoza.webp'),
+(11, 'Wonthon', 200, 'Wonthon Description', 'Starter', 'maxresdefault.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_food`
+--
+
+CREATE TABLE `order_food` (
+  `serial` int(11) NOT NULL,
+  `customer_serial` int(11) NOT NULL,
+  `food_cart` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `order_food`
+--
+
+INSERT INTO `order_food` (`serial`, `customer_serial`, `food_cart`) VALUES
+(1, 2, '[{\"serial\":11,\"name\":\"Wonthon\",\"price\":200,\"image\":\"maxresdefault.jpg\",\"count\":1},{\"serial\":10,\"name\":\"Gyoza\",\"price\":200,\"image\":\"gyoza.webp\",\"count\":1},{\"serial\":3,\"name\":\"Beef-Stake\",\"price\":1500,\"image\":\"GVR-HanksKobe.jpg\",\"count\":2},{\"serial\":4,\"name\":\"Strawberry-Ice-Cream\",\"price\":300,\"image\":\"http___cdn.cnn.com_cnnnext_dam_assets_171005130657-cambodia-cuisine-fine-dining-wat-damnak-purple-dragon-fruit-passion-and-vanilla-sorbet-meringue-and-curd-1.jpg\",\"count\":2},{\"serial\":9,\"name\":\"Blue\",\"price\":200,\"image\":\"blue_lemonade.webp\",\"count\":2}]');
 
 -- --------------------------------------------------------
 
@@ -66,18 +85,23 @@ CREATE TABLE `registration` (
 --
 
 INSERT INTO `registration` (`serial`, `username`, `email`, `password`, `user_type`) VALUES
-(2, 'naimabintehossain', 'naima@gmail.com', 'pass1234', NULL),
-(3, 'smshabab36', 'smshabab36@gmail.com', 'pass1234', 'admin');
+(2, 'naimabintehossain', 'naima@gmail.com', 'pass1234', 'admin');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `dashboard`
+-- Indexes for table `food`
 --
-ALTER TABLE `dashboard`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `food`
+  ADD PRIMARY KEY (`serial`);
+
+--
+-- Indexes for table `order_food`
+--
+ALTER TABLE `order_food`
+  ADD PRIMARY KEY (`serial`);
 
 --
 -- Indexes for table `registration`
@@ -90,10 +114,16 @@ ALTER TABLE `registration`
 --
 
 --
--- AUTO_INCREMENT for table `dashboard`
+-- AUTO_INCREMENT for table `food`
 --
-ALTER TABLE `dashboard`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `food`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `order_food`
+--
+ALTER TABLE `order_food`
+  MODIFY `serial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `registration`
