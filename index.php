@@ -17,10 +17,10 @@
     <div class="contain-fluid header">
 
         <div class="row">
-            <div class="col-lg-3 search">
+            <!-- <div class="col-lg-3 search">
                 <input type="text" placeholder="Search"/>
-            </div>
-            <div class="col-lg-6 d-flex justify-content-center menu">
+            </div> -->
+            <div class="col-lg-9 menu">
                 <ul>
                     <li>
                         <a href="#">Home</a>
@@ -59,7 +59,6 @@
                         if($_SESSION['session_is_alive']){ 
                     ?>
                         <button onclick="window.location.href='./views/login.php'">Logout</button>
-                        <button onclick="window.location.href='./views/order_food.php'">Cart</button>
                     <?php 
                         }else{ 
                     ?>

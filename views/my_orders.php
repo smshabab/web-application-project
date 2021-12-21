@@ -60,7 +60,6 @@
                         if($_SESSION['session_is_alive']){ 
                     ?>
                         <button onclick="window.location.href='./login.php'">Logout</button>
-                        <button onclick="window.location.href='./order_food.php'">Cart</button>
                     <?php 
                         }else{ 
                     ?>
