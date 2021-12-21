@@ -77,7 +77,7 @@
                                 <div class="row right_login_form_row_5">
                                     <div class="col-lg-5"></div>
                                     <div class="col-lg-2">
-                                        <button type="submit">SignUp</button>
+                                        <button type="submit" onclick="singup_button_press()">SignUp</button>
                                     </div>
                                     <div class="col-lg-5"></div>
                                 </div>

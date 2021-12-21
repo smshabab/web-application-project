@@ -182,26 +182,30 @@ function plusButtonPressHandler(serial){
 }
 
 function confirmOrderButtonPressHandler(){
-    const update_row_value = JSON.stringify(food_cart);
-    let ajax = new XMLHttpRequest();
-    let method = "GET";
-    let url = "../php/order_food.php?insert="+update_row_value;
-    let asynchronous = true;
-    ajax.open(method, url, asynchronous);
-    ajax.send();
-    ajax.onreadystatechange = function()
-    {   
-        if(this.readyState == 4 && this.status==200)
-        {
-            if(JSON.parse(this.responseText)==1){
-                alert("Order Complete. Please Check My Orders Page.");
-                total_cost = 0;
-                document.getElementById("total_price").innerHTML = String(total_cost);
-                food_cart = [];
-                load_cart();
+    if(total_cost!=0){
+        const update_row_value = JSON.stringify(food_cart);
+        let ajax = new XMLHttpRequest();
+        let method = "GET";
+        let url = "../php/order_food.php?insert="+update_row_value;
+        let asynchronous = true;
+        ajax.open(method, url, asynchronous);
+        ajax.send();
+        ajax.onreadystatechange = function()
+        {   
+            if(this.readyState == 4 && this.status==200)
+            {
+                if(JSON.parse(this.responseText)==1){
+                    alert("Order Complete. Please Check My Orders Page.");
+                    total_cost = 0;
+                    document.getElementById("total_price").innerHTML = String(total_cost);
+                    food_cart = [];
+                    load_cart();
+                }
             }
-        }
-    };
+        };
+    }else{
+        alert("Select an item to place an order");
+    }
 }
 
 function load_cart(){

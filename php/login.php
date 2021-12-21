@@ -2,7 +2,7 @@
     session_start();
     $_SESSION['session_is_alive'] = false;
     $_SESSION['admin'] = false;
-    $_SESSION['customer_serial'];
+    $_SESSION['customer_serial'] = 0;
     if (!empty($_POST)) {
             
         $email = trim($_POST['email']);

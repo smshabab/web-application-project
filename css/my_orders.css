@@ -56,15 +56,18 @@
     color: #000000;
 }
 
-.menu ul li:nth-child(2){
-    border-right: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-}
-.menu ul li:nth-child(4){
-    border-left: 2px solid #ffffff;
+.menu ul li{
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
 }
 
+.menu ul li:first-child{
+    border-left: 0;
+}
 
+.menu ul li:last-child{
+    border-right: 0;
+}
 
 .buttons{
   float: right;  
@@ -79,4 +82,10 @@
 .buttons button:hover{
     border: 2px solid #000000;
     color: #000000;
+}
+
+.recipt{
+    text-align: center;
+    background-color: aquamarine;
+    width: 100%;
 }

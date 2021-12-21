@@ -1,6 +1,9 @@
 <?php
     error_reporting(0);
     session_start();
+    if(!$_SESSION['session_is_alive']){
+        header("Location:login.php");
+    }
 ?>
 <html lang="en">
 <head>
@@ -23,7 +26,9 @@
                     <li>
                         <a href="../index.php">Home</a>
                     </li>
-                    
+                    <li>
+                        <a href="../index.php#contact">Contact</a>
+                    </li>
 
                     <?php 
                         if($_SESSION['session_is_alive']){ 
@@ -67,7 +72,67 @@
                 </div>
             </div>
         </div>
-    </div>                       
+
+    </div>    
+    
+    
+
+    <div class="container" style="margin-top:100px">
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+
+
+
+
+                <div class="recipt">
+                    <div class="row">
+                        <div class="col-lg-12" style="margin-top:50px">
+                            <h3>ORDER NO : <span id="order_no" style="margin: 0 10px;"></span></h3>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center" style="margin-top:50px">
+                        <div class="col-lg-1">
+                            <h4>NO</h4>
+                        </div>
+                        <div class="col-lg-4" style="text-align:left;">
+                            <h4>NAME</h4>
+                        </div>
+                        <div class="col-lg-2">
+                            <h4>QUANTITY</h4>
+                        </div>
+                        <div class="col-lg-3" style="text-align:right;">
+                            <h4>PRICE</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div id="selected_foods">
+
+                    </div>
+                
+
+                    <div class="row d-flex justify-content-center" style="margin:50px 100px">
+                        <div class="col-lg-6" style="text-align:left;">
+                            <h5>PAYMENT METHOD >>> CASH ON DELIVERY</h5>
+                        </div>
+                        <div class="col-lg-6" style="text-align:right;">
+                            <h5>TOTAL PRICE : <span id="total_price" style="margin: 0 10px;"></span>BDT</h5>
+                            
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="../javascript/my_orders.js"></script>

@@ -25,7 +25,9 @@
                     <li>
                         <a href="#">Home</a>
                     </li>
-                    
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
 
                     <?php 
                         if($_SESSION['session_is_alive']){ 
@@ -193,6 +195,16 @@
                 <button>button name</button>
             </div>
         </div>
+    </div>
+
+    <div class="container contact" id="contact">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Contact</h1>
+                <p>paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap parag</p>
+            </div>
+        </div>
+        
     </div>
 
 

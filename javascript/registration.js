@@ -13,12 +13,6 @@ function singup_button_press(){
         alert("Input Fields Can Not Be Empty");
     }else{
         console.log("ALL Input fields are filled");
-
-        
-
-
-
-
     }
 
 }

@@ -1,6 +1,6 @@
 <?php    
 
-    if (!empty($_POST)) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $username = trim($_POST['username']);
 		$email = trim($_POST['email']);
@@ -39,7 +39,8 @@
     }
 
     function validate_password($password){
-        $check = (preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) ?  true : false;
+        // $check = (preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $password)) ?  true : false;
+        $check = true;
         return $check;
     }
 
