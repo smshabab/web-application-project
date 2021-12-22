@@ -87,8 +87,8 @@
         <div class="row">
             <div class="col-lg-3"></div>
             <div class="col-lg-6">
-                <button>Hi there</button>
-                <button>How r u?</button>
+                <button onclick="window.location.href='./views/order_food.php'">Order Food</button>
+                <button onclick="window.location.href='#contact'">Contact US</button>
             </div>
             <div class="col-lg-3"></div>
         </div>
@@ -162,7 +162,7 @@
                     paragarap paragarap paragarap pa paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap 
                     
                 </p>
-                <button>Button</button>
+                <button onclick="window.location.href='./views/order_food.php'">Our Menu</button>
             </div>
             <div class="col-lg-6 right">
 
@@ -191,19 +191,42 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <button>button name</button>
+                <button onclick="window.location.href='./views/order_food.php'">Observe Our Food Menu</button>
             </div>
         </div>
     </div>
 
-    <div class="container contact" id="contact">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Contact</h1>
-                <p>paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap paragarap parag</p>
+    <div class="awesome_setion contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    
+                </div>
+                <div class="col-lg-4">
+                    <h1>CONTACT US</h1>
+                    <hr>
+                    <p>For Any Query Please Call +8801754296133</p>
+                </div>
+                <div class="col-lg-4">
+                    
+                </div>
             </div>
+            <form>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" name="" placeholder="Name">
+                        <input type="text" name="" placeholder="Email">
+                        <input type="text" name="" placeholder="Subject">
+                    </div>
+                    <div class="col-lg-6"> 
+                        <textarea rows="50" cols="5" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12 tabstext contact_button">
+                    <button>Send Message</button>
+                </div>
+            </form>
         </div>
-        
     </div>
 
 

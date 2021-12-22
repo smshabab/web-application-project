@@ -6,8 +6,6 @@
 		$email = trim($_POST['email']);
 		$password = $_POST['password'];
 		$confirm_password = $_POST['confirm_password'];
-
-        echo $username." ".$email." ".$password." ".$confirm_password."\n";
         
         if(!empty($username) && !empty($email) && !empty($password) && !empty($confirm_password)){
             if(validate_username($username) && validate_email($email) && validate_password($password) && validate_confirm_password($password, $confirm_password)){
@@ -53,7 +51,7 @@
         $check = false;
         $con=mysqli_connect("localhost","root","","naima_web_application_practice");
         if($con){
-            echo "Database connected successfully...<br/>";
+        
             $sql="SELECT `email` FROM `registration` WHERE email='.$email.'";
 
             $result=mysqli_query($con,$sql);
@@ -75,11 +73,9 @@
         $con=mysqli_connect("localhost","root","","naima_web_application_practice");
 
 		if($con){
-            echo "Database connected successfully...<br/>";
 			$sql="INSERT INTO `registration`(`username`, `email`, `password`) VALUES ('$username','$email','$password')";
 
             if(mysqli_query($con,$sql)){
-                echo "Row inserted";
                 header("Location:../views/login.php");
             }else{
                 echo "Insertion failed: ".mysqli_connect_error($con)."<br/>";

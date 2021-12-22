@@ -7,9 +7,6 @@
             
         $email = trim($_POST['email']);
         $password = $_POST['password'];
-
-
-        echo $email." ".$password."\n";
         
         if(!empty($email) && !empty($password)){
             if(check_user($email, $password)){
@@ -17,11 +14,8 @@
                 is_admin($email, $password) ? $_SESSION['admin'] = true : $_SESSION['admin'] = false;
                 header("Location:../index.php");
             }else{
-                echo "User do not exist (error)<br>";
-                echo "Email or password maybe incorrect<br>";
                 header("Location:../views/login.php");
             }
-            
         }else{
             header("Location:../views/login.php");
         }
@@ -34,7 +28,6 @@
         $con=mysqli_connect("localhost","root","","naima_web_application_practice");
 
 		if($con){
-            echo "Database connected successfully...<br/>";
 
             $sql="SELECT serial FROM registration WHERE email='".$email."' and password='".$password."'";
 
