@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/my_orders.css">
 </head>
 <body>
-    <div class="contain-fluid header">
+    <div class="contain-fluid header fixed-top">
         <div class="row">
             <div class="col-lg-3 search">
                 <input type="text" placeholder="Search"/>
@@ -76,12 +76,9 @@
     
     
 
-    <div class="container" style="margin-top:100px">
+    <div class="container" style="margin-top:200px">
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
-
-
-
 
                 <div class="recipt">
                     <div class="row">
@@ -104,12 +101,9 @@
                         </div>
                     </div>
 
-
-
                     <div id="selected_foods">
 
                     </div>
-                
 
                     <div class="row d-flex justify-content-center" style="margin:50px 100px">
                         <div class="col-lg-6" style="text-align:left;">
@@ -121,14 +115,7 @@
                         </div>
                     </div>
 
-
-
-
                 </div>
-
-
-
-
             </div>
         </div>
     </div>

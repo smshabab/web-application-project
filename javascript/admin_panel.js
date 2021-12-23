@@ -26,8 +26,6 @@ function onLoad(){
 
                 let val = document.createElement("Div");
 
-
-
                 if((edit_row_id_obj.editable==true) && (serial==edit_row_id_obj.serial)){
                     val.innerHTML = "<div class="+"food-card"+">"+
                                     "<div class="+"row"+">"+

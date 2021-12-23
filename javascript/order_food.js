@@ -61,6 +61,7 @@ function onLoad(){
                                         "<h3>"+name+"</h3>"+
                                         "<p>"+description+"</p>"+
                                     "</div>";
+                    document.getElementById("starters").appendChild(val1);
                 }else if(type=="Main Course"){
                     val2.className = "col-lg-4 d-flex justify-content-center";
                     val2.innerHTML ="<div class="+"food-card"+">"+
@@ -72,6 +73,7 @@ function onLoad(){
                                         "<h3>"+name+"</h3>"+
                                         "<p>"+description+"</p>"+
                                     "</div>";
+                    document.getElementById("mains").appendChild(val2);
                 }else if(type=="Desert"){
                     val3.className = "col-lg-4 d-flex justify-content-center";
                     val3.innerHTML ="<div class="+"food-card"+">"+
@@ -83,6 +85,7 @@ function onLoad(){
                                         "<h3>"+name+"</h3>"+
                                         "<p>"+description+"</p>"+
                                     "</div>";
+                    document.getElementById("deserts").appendChild(val3);
                 }else{
                     val4.className = "col-lg-4 d-flex justify-content-center";
                     val4.innerHTML ="<div class="+"food-card"+">"+
@@ -94,12 +97,13 @@ function onLoad(){
                                         "<h3>"+name+"</h3>"+
                                         "<p>"+description+"</p>"+
                                     "</div>";
+                    document.getElementById("drinks").appendChild(val4);
                 }
                    
-                document.getElementById("starters").appendChild(val1);
-                document.getElementById("mains").appendChild(val2);
-                document.getElementById("deserts").appendChild(val3);
-                document.getElementById("drinks").appendChild(val4);
+                
+                
+                
+                
             }
         }
     };
@@ -244,7 +248,7 @@ function load_cart(){
                             "<div class="+"col-lg-2"+">"+
                                 food_cart[i].price+" BDT"+
                             "</div>"+
-                            "<div class="+"col-lg-2"+">"+
+                            "<div style="+"text-align:right;"+" class="+"col-lg-2"+">"+
                                 (food_cart[i].price*food_cart[i].count)+" BDT"+
                             "</div>"+
                         "</div>";

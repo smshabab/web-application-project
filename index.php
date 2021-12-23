@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <div class="contain-fluid header">
+    <div class="contain-fluid header fixed-top">
 
         <div class="row">
             <!-- <div class="col-lg-3 search">

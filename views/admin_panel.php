@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <div class="contain-fluid header">
+    <div class="contain-fluid header fixed-top">
         <div class="row">
             <div class="col-lg-3 search">
                 <input type="text" placeholder="Search"/>
@@ -75,9 +75,10 @@
 
 
     <div class="contain-fluid admin_panel">
-        <div class="row h-100 position-fixed">
+        <div class="row h-100">
+
             <div class="col-lg-8 admin_panel_left h-100 overflow-auto">
-                <h1>Search Product</h1>
+                <h1>Search Food</h1>
                 <div id="foods"></div>
             </div>
 
@@ -127,7 +128,7 @@
                             <p>Food Description</p>
                         </div>
                         <div class="col-lg-8">
-                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                            <textarea name="description" id="description" rows="10"></textarea>
                         </div>
                     </div>
                     <div class="row admin_panel_right_row">
