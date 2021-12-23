@@ -1,4 +1,3 @@
-let edit_row_id_obj = {"editable":false, "serial":1};
 let total_cost = 0;
 let food_cart = [];
 
@@ -46,9 +45,7 @@ function onLoad(){
                     }else{
                         pass_name+=name[j];
                     }
-                    
                 }
-
 
                 if(type=="Starter"){
                     val1.className = "col-lg-4 d-flex justify-content-center";
@@ -100,117 +97,12 @@ function onLoad(){
                     document.getElementById("drinks").appendChild(val4);
                 }
                    
-                
-                
-                
-                
             }
         }
     };
 
 }
 onLoad();
-load_cart();
-
-function addFoodButtonPressHandler(serial, name, price, image){
-    let check = true;
-    food_cart.map((obj, index)=>{
-        if(obj.serial == serial){
-            check = false;
-            alert("Food has Already been added to the Cart");
-        }
-    });
-
-    if(check){
-        total_cost += price;
-        document.getElementById("total_price").innerHTML = String(total_cost);
-
-        let obj = {
-            "serial": serial,
-            "name": name,
-            "price": price,
-            "image": image,
-            "count": 1
-        };
-
-        food_cart.push(obj);
-        load_cart();
-        console.log(food_cart);
-   }
-}
-
-function removeFoodButtonPressHandler(serial){
-    food_cart.map((obj, index)=>{
-        if(obj.serial == serial){
-            total_cost -= (obj.price*obj.count);
-            document.getElementById("total_price").innerHTML = String(total_cost);
-            delete food_cart[index];
-        }
-    });
-    console.log(food_cart);
-    load_cart();
-}
-
-function minusButtonPressHandler(serial){
-    console.log("Minus button pressed : "+serial);
-
-    food_cart.map((obj, index)=>{
-        if(obj.serial == serial){
-            if(obj.count>1 ){
-                obj.count--;
-                total_cost -= obj.price;
-                document.getElementById("total_price").innerHTML = String(total_cost);
-            }else{
-                alert("Food Count Cannot be less than 1");
-            }
-            
-        }
-    });
-    console.log(food_cart);
-    load_cart();
-}
-
-function plusButtonPressHandler(serial){
-    console.log("Plus button pressed : "+serial);
-    
-
-    food_cart.map((obj, index)=>{
-        if(obj.serial == serial){
-            obj.count++;
-            total_cost += obj.price;
-            document.getElementById("total_price").innerHTML = String(total_cost);
-        }
-    });
-    console.log(food_cart);
-    load_cart();
-}
-
-function confirmOrderButtonPressHandler(){
-    if(total_cost!=0){
-        const update_row_value = JSON.stringify(food_cart);
-        let ajax = new XMLHttpRequest();
-        let method = "GET";
-        let url = "../php/order_food.php?insert="+update_row_value;
-        let asynchronous = true;
-        ajax.open(method, url, asynchronous);
-        ajax.send();
-        ajax.onreadystatechange = function()
-        {   
-            if(this.readyState == 4 && this.status==200)
-            {
-                if(JSON.parse(this.responseText)==1){
-                    alert("Order Complete. Please Check My Orders Page.");
-                    total_cost = 0;
-                    document.getElementById("total_price").innerHTML = String(total_cost);
-                    food_cart = [];
-                    load_cart();
-                }
-            }
-        };
-    }else{
-        alert("Select an item to place an order");
-    }
-}
 
 function load_cart(){
     document.getElementById("total_food_count").innerHTML = String(food_cart.length);
@@ -257,4 +149,103 @@ function load_cart(){
 
     
 }
+load_cart();
+
+function addFoodButtonPressHandler(serial, name, price, image){
+    let check = true;
+    food_cart.map((obj, index)=>{
+        if(obj.serial == serial){
+            check = false;
+            alert("Food has Already been added to the Cart");
+        }
+    });
+
+    if(check){
+        total_cost += price;
+        document.getElementById("total_price").innerHTML = String(total_cost);
+
+        let obj = {
+            "serial": serial,
+            "name": name,
+            "price": price,
+            "image": image,
+            "count": 1
+        };
+
+        food_cart.push(obj);
+        load_cart();
+   }
+}
+
+function removeFoodButtonPressHandler(serial){
+    food_cart.map((obj, index)=>{
+        if(obj.serial == serial){
+            total_cost -= (obj.price*obj.count);
+            document.getElementById("total_price").innerHTML = String(total_cost);
+            delete food_cart[index];
+        }
+    });
+    load_cart();
+}
+
+function minusButtonPressHandler(serial){
+    console.log("Minus button pressed : "+serial);
+
+    food_cart.map((obj, index)=>{
+        if(obj.serial == serial){
+            if(obj.count>1){
+                obj.count--;
+                total_cost -= obj.price;
+                document.getElementById("total_price").innerHTML = String(total_cost);
+            }else{
+                alert("Food Count Cannot be less than 1");
+            }
+            
+        }
+    });
+    load_cart();
+}
+
+function plusButtonPressHandler(serial){
+    console.log("Plus button pressed : "+serial);
+    
+    food_cart.map((obj, index)=>{
+        if(obj.serial == serial){
+            obj.count++;
+            total_cost += obj.price;
+            document.getElementById("total_price").innerHTML = String(total_cost);
+        }
+    });
+    console.log(food_cart);
+    load_cart();
+}
+
+function confirmOrderButtonPressHandler(){
+    if(total_cost!=0){
+        const update_row_value = JSON.stringify(food_cart);
+        let ajax = new XMLHttpRequest();
+        let method = "GET";
+        let url = "../php/order_food.php?insert="+update_row_value;
+        let asynchronous = true;
+        ajax.open(method, url, asynchronous);
+        ajax.send();
+        ajax.onreadystatechange = function()
+        {   
+            if(this.readyState == 4 && this.status==200)
+            {
+                if(JSON.parse(this.responseText)==1){
+                    alert("Order Complete. Please Check My Orders Page.");
+                    total_cost = 0;
+                    document.getElementById("total_price").innerHTML = String(total_cost);
+                    food_cart = [];
+                    load_cart();
+                }
+            }
+        };
+    }else{
+        alert("Select an item to place an order");
+    }
+}
+
+
 
