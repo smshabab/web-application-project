@@ -51,7 +51,7 @@ function onLoad(){
                                                     "<select name="+"type"+" id="+"type"+">"+
                                                         "<option>Select a type</option>"+
                                                         "<option value="+"Starter"+">Starter</option>"+
-                                                        "<option value="+"Main Course"+">Main Course</option>"+
+                                                        "<option value="+"Main-Course"+">Main Course</option>"+
                                                         "<option value="+"Desert"+">Desert</option>"+
                                                         "<option value="+"Drinks"+">Drinks</option>"+
                                                     "</select>"+
@@ -159,8 +159,17 @@ function updateButtonPressHandler(serial){
     const name = document.getElementById('name').value;
     const price = document.getElementById('price').value;
     const description = document.getElementById('description').value;
-    const type = document.getElementById('type').value;
-
+    let type = '';
+    const tempType = document.getElementById('type').value;
+    
+    for(let i=0; i<tempType.length; i+=1){
+        if(tempType[i]=='-'){
+            type+=' ';
+        }else{
+            type+=tempType[i];
+        }
+    }
+    
 
     if(type=="Select a type"){
         alert("Select a Type");

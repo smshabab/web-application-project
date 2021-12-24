@@ -33,8 +33,8 @@
                                     </div>
                                     <div class="row left_login_form_bottom_row">
                                         <div class="col-lg-12">
-                                            <h3>Heading #3 is being used here!</h3>
-                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                            <h3>Eat thoughtfully, Live joyfully!</h3>
+                                            <p>Healthy eating is all about balance. Join our food community, browse recipes, shop for kitchen, cooking, and home products, enter our contests, and get advice from our hotline..</p>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
     
                                 <div class="row right_login_form_row_1">
                                     <div class="col-lg-12">
-                                        <h3>Project Name</h3>
+                                        <h3>Mix Of Flavors</h3>
                                     </div>
                                 </div>
     
